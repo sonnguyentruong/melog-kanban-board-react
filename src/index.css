@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  @apply bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 box-border
+}
+
+/* Beautiful custom scrollbar for columns */
+.column-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column-scroll::-webkit-scrollbar-track {
+  @apply bg-slate-100 rounded-full;
+}
+
+.column-scroll::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+  transition: background-color 0.2s ease;
+}
+
+.column-scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* General page scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+/* Task content scrollbar */
+.task-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.task-content::-webkit-scrollbar-track {
+  @apply bg-slate-50 rounded-full;
+}
+
+.task-content::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full;
+}
