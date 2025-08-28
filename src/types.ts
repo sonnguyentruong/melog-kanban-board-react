@@ -6,7 +6,9 @@ export type Column ={
 }
 
 export type Task = {
-    id: Id;
+    id: string;
     columnId: Id;
-    content: string;
+    description: string;
+    type: string;
+    assignee?: string;
 }

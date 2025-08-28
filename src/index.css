@@ -5,7 +5,9 @@
 html,
 body,
 #root {
-  @apply bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800 box-border
+  @apply bg-gray-50 text-slate-800 box-border h-full;
+  margin: 0;
+  padding: 0;
 }
 
 /* Beautiful custom scrollbar for columns */
@@ -54,4 +56,34 @@ body,
 
 .task-content::-webkit-scrollbar-thumb {
   @apply bg-slate-200 rounded-full;
+}
+
+/* Sidebar specific styles */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Smooth transitions for layout changes */
+.layout-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom focus styles */
+.focus-ring:focus {
+  outline: none;
+  ring: 2px;
+  ring-color: rgb(59 130 246);
+  ring-offset: 2px;
 }
